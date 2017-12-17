@@ -18,7 +18,7 @@ img {
 #insertcss {
   width: 500px;
   height: 200px;
-  background-image: url(/Users/fufei/Documents/GITHUB/learn-webpack/learn05/distimg/c841c1357ae08329349b22bdd3dbc886.png);
+  background-image: url(http://192.168.31.104:8080/img/c841c1357ae08329349b22bdd3dbc886.png);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }

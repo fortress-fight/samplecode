@@ -3,10 +3,11 @@ const path = require('path'),
     htmlWebpack = require('html-webpack-plugin'),
     uglifyJS = require('uglifyjs-webpack-plugin'),
     extractcss = require('extract-text-webpack-plugin'),
-    purifycss = require('purifycss-webpack');
+    purifycss = require('purifycss-webpack'),
+    webpack = require('webpack');
 
 const websit = {
-    pablicPath: path.resolve(__dirname, 'dist/')
+    pablicPath: 'http://192.168.31.104:8080/'
 }
 
 module.exports = {
@@ -66,12 +67,14 @@ module.exports = {
         // new uglifyJS(),
         new purifycss({
             paths: glob.sync(path.join(__dirname, 'src/*.html'))
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
         contentBase: path.resolve(__dirname, 'dist'),
         port: 8080,
         compress: true,
+        hot: true,
         host: '192.168.31.104'
     }
 }
