@@ -1,0 +1,1 @@
+document.getElementById('insertjs').innerHTML = "这里是通过 JS 插入的文字";

@@ -1,0 +1,7 @@
+div {
+    &:after {
+        content: "这里是使用 scss 添加的";
+        font-size: 20px;
+    }
+    transform: rotate(45deg);
+}

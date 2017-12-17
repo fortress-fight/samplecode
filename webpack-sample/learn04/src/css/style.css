@@ -1,0 +1,10 @@
+div {
+    width: 300px;
+    height: 200px;
+    background: url('../img/62kb.png');
+    transform: rotate(45deg);
+}
+
+#disable {
+    height: 200px;
+}

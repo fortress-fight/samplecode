@@ -1,0 +1,14 @@
+#insertscss {
+    &:after {
+        content: "这里是通过 scss 插入的文字"
+    }
+}
+img {
+    max-width: 100%;
+    transform: rotate(-45deg);
+}
+
+#noel {
+    width: 100px;
+    height: 200px;
+}

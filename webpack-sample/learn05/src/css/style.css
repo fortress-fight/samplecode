@@ -1,0 +1,11 @@
+#insertcss:after{
+    content: "这里是通过 css 文件插入的文字";
+    color: #fff;
+}
+
+#insertcss {
+    width: 500px;
+    height: 200px;
+    background-image: url('../img/62kb.png');
+    transform: rotate(45deg);
+}

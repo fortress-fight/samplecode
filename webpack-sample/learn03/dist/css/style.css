@@ -1,0 +1,10 @@
+body #div1 {
+    width: 300px;
+    height: 300px;
+    background: url(/Users/fufei/Documents/GITHUB/learn-webpack/learn03/dist/img/c841c1357ae08329349b22bdd3dbc886.png) no-repeat;
+}
+body #div2 {
+    width: 300px;
+    height: 300px;
+    background: url(/Users/fufei/Documents/GITHUB/learn-webpack/learn03/dist/img/793037bba6236d8b785bb422b7ed634e.png) no-repeat;
+}

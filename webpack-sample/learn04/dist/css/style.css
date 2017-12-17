@@ -1,0 +1,18 @@
+div {
+  width: 300px;
+  height: 200px;
+  background: url(/Users/fufei/Documents/GITHUB/learn-webpack/learn04/dist/img/c841c1357ae08329349b22bdd3dbc886.png);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@charset "UTF-8";
+
+div {
+  transform: rotate(45deg);
+}
+
+div:after {
+  content: "\8FD9\91CC\662F\4F7F\7528   scss \6DFB\52A0\7684";
+  font-size: 20px;
+}

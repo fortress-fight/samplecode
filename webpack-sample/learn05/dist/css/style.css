@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+#insertscss:after {
+  content: "\8FD9\91CC\662F\901A\8FC7   scss \63D2\5165\7684\6587\5B57";
+}
+
+img {
+  max-width: 100%;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#insertcss:after {
+  content: "\8FD9\91CC\662F\901A\8FC7   css \6587\4EF6\63D2\5165\7684\6587\5B57";
+  color: #fff;
+}
+
+#insertcss {
+  width: 500px;
+  height: 200px;
+  background-image: url(/Users/fufei/Documents/GITHUB/learn-webpack/learn05/distimg/c841c1357ae08329349b22bdd3dbc886.png);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

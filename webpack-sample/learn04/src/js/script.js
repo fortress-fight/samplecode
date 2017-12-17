@@ -1,0 +1,1 @@
+document.getElementById('jscode').innerHTML = '这里是 JS 插入的代码';
