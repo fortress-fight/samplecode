@@ -133,11 +133,18 @@
 // console.log(personInfor); // { age: 24, job: 'student' }
 // console.log(pick.length); // 1
 
-// 10
+// // 10
 
-function example(first, ...arr) {
-  console.log(arr.length);
-  console.log(arguments.length);
-}
+// function example(first, ...arr) {
+//   console.log(arr.length);
+//   console.log(arguments.length);
+// }
 
-example(1, 2, 3, 4, 5, 6); // 5 6
+// example(1, 2, 3, 4, 5, 6); // 5 6
+
+// 11
+
+console.log(Math.max(1,34,23,123,121)) // 123
+var arr = [1,34,23,123,121];
+console.log(Math.max(arr)) // NaN
+console.log(Math.max(...arr)) // 123
