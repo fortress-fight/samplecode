@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./watch.js"></script>
+</head>
+<body>
+    <p>1. 监控了 obj 的 name job age属性，在控制台中修改查看效果, 点击这句话将会解除 name 监控</p>   
+    <p>2. 监控了数组 arr，在控制台中修改查看效果</p>   
+    <script>
+        var obj = {
+            name: 'ff',
+            age: 24,
+            job: 'student'
+        },
+        arr = [1,2,3,4];
+
+        watch(obj, 'name', function () {
+            console.log(arguments); // 例如：obj.name = "change"  ["name", "set", "change", "ff"]
+            // arguments[0] -- 发生变化的属性
+            // arguments[1] -- 发生的行为 （set）
+            // arguments[2] -- 改变后的值
+            // arguments[3] -- 改变前的值
+            alert('name 发生了改变')
+        });
+
+        // 监控多个属性
+        watch(obj, ['age', 'job'], function () {
+            console.log(arguments);
+            alert('age 或 job 发生了改变')
+        });
+
+        // 监控所有项
+        watch(arr, function () {
+            console.log(arguments); // 例如：arr.push(2)  [4, "push", 2, undefined]
+            // arguments[0] -- 发生变化的属性
+            // arguments[1] -- 发生的行为 (push, set ...)
+            // arguments[2] -- 改变后的值
+            // arguments[3] -- 改变前的值
+            alert('arr change')
+        });
+
+        // remove watch
+        document.querySelectorAll('p')[0].onclick = function () {
+            unwatch(obj, 'name')
+        } 
+
+        // 如果监控出现了死循环，需要使用 WatchJS.noMore = true; 这样将会在一次完整循环后就结束关联
+        var obj2 = {
+            attr: '1',
+            attr2: '1'
+        };
+
+        watch(obj2, 'attr', function () {
+            WatchJS.noMore = true;
+            obj2.attr2 += 2;
+            console.log(obj2.attr2);
+        });
+        watch(obj2, 'attr2', function () {
+            obj2.attr += 1; 
+            console.log(obj2.attr);
+        });
+
+        // 控制监控属性的深度，只要是在指定深度以及以下的属性发生变化就将会发生调用
+        var ex = {
+            //level 0
+            l1a: "bla bla",
+            l1b: {
+                //level 1 or less
+                l2a: "lo lo",
+                l2b: {
+                    //level 2 or less
+                    deeper: "so deep"
+                }           
+            }
+        };
+
+        // watch(ex, function(){
+        //     alert("ex changed at lvl 2 or less");
+        // }, 1);
+
+        // watch(ex, function(){
+        //     alert("ex changed at lvl 3 or less");
+        // }, 2);
+
+
+        // ex.l1b.l2b.deeper = "other value";
+
+
+        // ex.l1b.l2b = "other value";
+
+        // 如果监控了所有属性，也是针对当前已存在的属性，不包括后来的属性；
+        var obj3 = {
+            attr1: 'name',
+            attr2: 'age'
+        };
+        watch(obj3, function () {
+            console.log('change');
+        });
+
+        // 如果想对后添加的属性进行监控,需要设置监控为 true，并且需要等上 50 ms 才能使用；
+        var obj4 = {
+            attr1: 'name',
+            attr2: 'age'
+        };
+        watch(obj4, function () {
+            console.log('change');
+        }, 0, true);
+
+        // 可以通过 callWatchers 直接调用
+        callWatchers(obj4, "attr1");
+
+        // 可以应用于构造函数中
+
+        var Apple = function(type) {
+            var _thisApple = this;
+            this.type = type;
+            this.color = "red";
+
+            this.getInfo = function() {
+                return this.color + ' ' + this.type + ' apple';
+            };
+
+            watch(this, function(){
+                console.log("although we are using Watch.js the apple structure remains the same");
+                for(var i in _thisApple){
+                    console.log(i+": "+_thisApple[i]);
+                }
+            });
+        };
+
+
+        // var apple = new Apple("macintosh");
+        // apple.type = "other";
+        // console.log(apple.getInfo());
+
+    </script>
+</body>
+</html>
