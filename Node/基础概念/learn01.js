@@ -102,21 +102,40 @@
 //     console.log(3);
 // }
 
-// 09
+// // 09
 
-let http = require('http');
+// let http = require('http');
 
-http.createServer(function () {
-    console.log(1);
-    a()
-}).listen(3030);
-function a () {
-    console.log(2);
-    b();
-}
-function b () {
-    setTimeout(() => {
-        throw new Error('错误');   
-    });
-    console.log(3);
-}
+// http.createServer(function () {
+//     console.log(1);
+//     a()
+// }).listen(3030);
+// function a () {
+//     console.log(2);
+//     b();
+// }
+// function b () {
+//     setTimeout(() => {
+//         throw new Error('错误');   
+//     });
+//     console.log(3);
+// }
+
+// // 10
+// console.log(1);
+// process.nextTick(function () {
+//     console.log(2);
+// });
+// console.log(3);
+
+// 11
+let event = require('events').EventEmitter,
+    ev1 = new event;
+
+// 绑定事件
+ev1.on('event', function () {
+    console.log('run')
+});
+
+// 触发事件
+ev1.emit('event')
