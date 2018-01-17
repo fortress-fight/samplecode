@@ -60,25 +60,25 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 4:
+/***/ 6:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__export2__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__export2__ = __webpack_require__(7);
 
 
 console.log(Object(__WEBPACK_IMPORTED_MODULE_0__export2__["a" /* default */])(1,2)); // 3
-console.log(__WEBPACK_IMPORTED_MODULE_0__export2__["b" /* example */]);
+console.log(__WEBPACK_IMPORTED_MODULE_0__export2__["b" /* example */]); // haha
 
 /***/ }),
 
-/***/ 5:
+/***/ 7:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

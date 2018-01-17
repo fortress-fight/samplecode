@@ -60,18 +60,18 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "color", function() { return color; });
-/* harmony export (immutable) */ __webpack_exports__["example"] = example;
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "add", function() { return sum; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return color; });
+/* harmony export (immutable) */ __webpack_exports__["c"] = example;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return sum; });
 // 导出变量
 var color = 'red';
 
@@ -86,7 +86,7 @@ class example2 {
         console.log('this is a class fn')
     }
 }
-/* harmony export (immutable) */ __webpack_exports__["example2"] = example2;
+/* unused harmony export example2 */
 
 
 function sum (num1, num2) {
@@ -96,9 +96,8 @@ function sum (num1, num2) {
 
 
 /***/ }),
-/* 1 */,
-/* 2 */,
-/* 3 */
+
+/***/ 5:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -107,11 +106,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-console.log(__WEBPACK_IMPORTED_MODULE_0__export_js__["add"]);
+console.log(__WEBPACK_IMPORTED_MODULE_0__export_js__["a" /* add */]);
 // [Function: sum]
 
-console.log(__WEBPACK_IMPORTED_MODULE_0__export_js__["example"])
+console.log(__WEBPACK_IMPORTED_MODULE_0__export_js__["c" /* example */])
 // [Function: example]
 
 /***/ })
-/******/ ]);
+
+/******/ });

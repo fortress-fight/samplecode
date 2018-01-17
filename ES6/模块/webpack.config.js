@@ -6,6 +6,7 @@ module.exports = {
         entry2: './learn02.js',
         entry3: './learn03.js',
         entry4: './learn04.js',
+        entry5: './learn05.js',
     },
     output: {
         path: path.resolve(__dirname, './dist'),

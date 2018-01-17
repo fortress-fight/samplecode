@@ -1,6 +1,6 @@
-import * as example from './export.js';
+import * as example from './sumadd.js';
 
-console.log(example);
+console.log(example, '05');
 
 
 // { color: [Getter],

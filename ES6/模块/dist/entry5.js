@@ -60,12 +60,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */
+/******/ ({
+
+/***/ 1:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -84,7 +84,8 @@ function mul (num1, num2) {
 
 
 /***/ }),
-/* 2 */
+
+/***/ 2:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -98,8 +99,8 @@ console.log('sum.js')
 
 
 /***/ }),
-/* 3 */,
-/* 4 */
+
+/***/ 8:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -107,12 +108,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sumadd_js__ = __webpack_require__(1);
 
 
-console.log(__WEBPACK_IMPORTED_MODULE_0__sumadd_js__, '05');
-
-
-// { color: [Getter],
-//     example: [Function: example],
-//     example2: [Function: example2] }
+console.log(__WEBPACK_IMPORTED_MODULE_0__sumadd_js__["mul"]);
 
 /***/ })
-/******/ ]);
+
+/******/ });
